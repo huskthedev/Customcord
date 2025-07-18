@@ -22,7 +22,6 @@ import CloudTab from "@components/VencordSettings/CloudTab";
 import PatchHelperTab from "@components/VencordSettings/PatchHelperTab";
 import PluginsTab from "@components/VencordSettings/PluginsTab";
 import ThemesTab from "@components/VencordSettings/ThemesTab";
-import UpdaterTab from "@components/VencordSettings/UpdaterTab";
 import VencordTab from "@components/VencordSettings/VencordTab";
 import { Devs } from "@utils/constants";
 import { getIntlMessage } from "@utils/discord";
@@ -86,47 +85,41 @@ export default definePlugin({
         return [
             {
                 section: SectionTypes.HEADER,
-                label: "Vencord",
+                label: "Customcord",
                 className: "vc-settings-header"
             },
             {
-                section: "VencordSettings",
-                label: "Vencord",
+                section: "CustomcordSettings",
+                label: "Customcord",
                 element: VencordTab,
                 className: "vc-settings"
             },
             {
-                section: "VencordPlugins",
+                section: "CustomcordPlugins",
                 label: "Plugins",
                 element: PluginsTab,
                 className: "vc-plugins"
             },
             {
-                section: "VencordThemes",
+                section: "CustomcordThemes",
                 label: "Themes",
                 element: ThemesTab,
                 className: "vc-themes"
             },
             !IS_UPDATER_DISABLED && {
-                section: "VencordUpdater",
+                section: "CustomcordUpdater",
                 label: "Updater",
-                element: UpdaterTab,
+                element: () => [],
                 className: "vc-updater"
             },
             {
-                section: "VencordCloud",
-                label: "Cloud",
-                element: CloudTab,
-                className: "vc-cloud"
-            },
-            {
-                section: "VencordSettingsSync",
+                section: "CustomcordBackupAndRestore",
                 label: "Backup & Restore",
                 element: BackupAndRestoreTab,
                 className: "vc-backup-restore"
             },
             IS_DEV && {
-                section: "VencordPatchHelper",
+                section: "CustomcordPatchHelper",
                 label: "Patch Helper",
                 element: PatchHelperTab,
                 className: "vc-patch-helper"
@@ -232,7 +225,7 @@ export default definePlugin({
     getInfoRows() {
         const { electronVersion, chromiumVersion, additionalInfo } = this;
 
-        const rows = [`Vencord ${gitHash}${additionalInfo}`];
+        const rows = [`Customcord V1 BETA`];
 
         if (electronVersion) rows.push(`Electron ${electronVersion}`);
         if (chromiumVersion) rows.push(`Chromium ${chromiumVersion}`);

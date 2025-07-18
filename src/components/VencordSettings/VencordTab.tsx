@@ -51,7 +51,7 @@ type KeysOfType<Object, Type> = {
     [K in keyof Object]: Object[K] extends Type ? K : never;
 }[keyof Object];
 
-function VencordSettings() {
+function CustomcordSettings() {
     const settings = useSettings();
 
     const donateImage = React.useMemo(() => Math.random() > 0.5 ? DEFAULT_DONATE_IMAGE : SHIGGY_DONATE_IMAGE, []);
@@ -105,37 +105,12 @@ function VencordSettings() {
         ];
 
     return (
-        <SettingsTab title="Vencord Settings">
-            {isDonor(user?.id)
-                ? (
-                    <SpecialCard
-                        title="Donations"
-                        subtitle="Thank you for donating!"
-                        description="You can manage your perks at any time by messaging @vending.machine."
-                        cardImage={VENNIE_DONATOR_IMAGE}
-                        backgroundImage={DONOR_BACKGROUND_IMAGE}
-                        backgroundColor="#ED87A9"
-                    >
-                        <DonateButtonComponent />
-                    </SpecialCard>
-                )
-                : (
-                    <SpecialCard
-                        title="Support the Project"
-                        description="Please consider supporting the development of Vencord by donating!"
-                        cardImage={donateImage}
-                        backgroundImage={DONOR_BACKGROUND_IMAGE}
-                        backgroundColor="#c3a3ce"
-                    >
-                        <DonateButtonComponent />
-                    </SpecialCard>
-                )
-            }
+        <SettingsTab title="customcord Settings">
             {isPluginDev(user?.id) && (
                 <SpecialCard
                     title="Contributions"
                     subtitle="Thank you for contributing!"
-                    description="Since you've contributed to Vencord you now have a cool new badge!"
+                    description="Since you've contributed to customcord you now have a cool new badge!"
                     cardImage={COZY_CONTRIB_IMAGE}
                     backgroundImage={CONTRIB_BACKGROUND_IMAGE}
                     backgroundColor="#EDCC87"
@@ -298,4 +273,4 @@ function isDonor(userId: string): boolean {
     return GuildMemberStore.getMember(VENCORD_GUILD_ID, userId)?.roles.includes(DONOR_ROLE_ID) || !!donorBadges;
 }
 
-export default wrapTab(VencordSettings, "Vencord Settings");
+export default wrapTab(CustomcordSettings, "Customcord Settings");

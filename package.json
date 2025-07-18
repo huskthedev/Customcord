@@ -1,8 +1,8 @@
 {
-    "name": "vencord",
+    "name": "customcord",
     "private": "true",
     "version": "1.12.6",
-    "description": "The cutest Discord client mod",
+    "description": "The most customizable discord client",
     "homepage": "https://github.com/Vendicated/Vencord#readme",
     "bugs": {
         "url": "https://github.com/Vendicated/Vencord/issues"
