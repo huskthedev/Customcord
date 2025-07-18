@@ -4,8 +4,6 @@
 
 The most customizable Discord client mod
 
-![](https://customcord.dev/assets/showcase.png)
-
 ## Why CustomCord?
 
 CustomCord is built for power users and customization fanatics. While other client mods aim for convenience or simplicity, **CustomCord gives you full control** over your Discord experience — from interface to behavior.
