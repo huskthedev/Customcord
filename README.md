@@ -1,7 +1,5 @@
 # CustomCord
 
-![](https://img.shields.io/github/package-json/v/CustomCord/CustomCord?style=for-the-badge\&logo=github\&logoColor=blueviolet\&label=\&color=1d2021\&labelColor=282828)
-
 The most customizable Discord client mod
 
 ## Why CustomCord?
@@ -64,3 +62,8 @@ To stay safe:
 * Avoid showing CustomCord in screenshots on public Discord servers.
 
 </details>
+
+credits to vencord©
+https://vencord.dev/
+
+# IF YOU DECIDE TO USE THIS PROJECT FOR YOUR OWN DISCORD MOD THEN PLEASE FOLLOW THE GNU LICENS AND CREDIT VENCORD!
